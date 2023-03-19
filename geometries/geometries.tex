@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Géométries}
+\author{William Hergès}
+\date{\today}
+
+\begin{document}
+	\maketitle
+
+	\section{Introduction}
+
+	La géométrie dans le plan et dans l'espace fonctionne de la même manière au niveau des notations à l'unique différence que dans l'espace il y a 3 coordonnées et non plus que 2.
+
+	\section{Appartenance à une droite et plan}
+
+	Soit $M$ un point de $(AB)$.
+	\[M \in (AB) \] \begin{center} $\Leftrightarrow \vec{AM}$ colinéaire à $\vec{AB}$ \end{center}
+	\[\Leftrightarrow \vec{AM} \Leftrightarrow k\vec{AB} ; k \in \mathbb{R}\]
+
+	Soit $A,B,C$ des points non alignés du plan $(ABC)$. \\
+	Soit $M$ un point du plan $(ABC)$.
+	\[
+		M \in (ABC) \Leftrightarrow \vec{AM} = x\vec{AC} + y\vec{AB} ; x,y \in \mathbb{R}
+	\]
+	Soit $N$ un point du même plan. \\
+	$M$ et $N$ sont coplanaires. \\
+	\\
+	$\vec{AB}$ et $\vec{AC}$ sont des vecteurs directeurs du plan $(ABC)$. $(\vec{AB}, \vec{AC})$ est une base de ce plan et $A, \vec{AB}, \vec{AC}$ un repère de ce plan.
+
+	Pour calculer la norme d'un vecteur, il faut connaître les coordonnées de ce dernier, ici noté $x;y;z$.
+	\[ |AB| = \sqrt{x^2+y^2+z^3} \]
+
+	Si on souhaite connaître la distance entre le point $A$ et le plan $P$ de vecteur normal $\vec{n}$, il nous faut un point $B \in P$. \\
+	Cette distance est représenté par $AH$ avec $H$ le projeté orthogonal de $A$ sur $P$.
+	\[ AH = \frac{|\vec{AB} \cdot \vec{n}|}{\|\vec{u}\|} \]
+
+	Si on souhaite connaître la distance entre le point $A$ et la droite $d$ de vecteur directeur $\vec{u}$, il nous faut un point $B \in d$. \\
+	Cette distance est représenté par $AH$ avec $H$ le projeté orthogonal de $A$ sur $P$.
+	\[ AH = \|\vec{AB}-\frac{\vec{AB}\cdot\vec{u}}{\|\vec{u}^2\|}\vec{u}\| \]
+
+	\section{Théorème du toit}
+
+	Soient $P_1$ et $P_2$ deux plans sécants suivant une droite $d$. \\
+	\\
+	Si une droite est parallèle à $P_1$ et $P_2$, alors elle est parallèle à $d$. \\
+	S'il existe deux droites parallèles $d_1$ et $d_2$, contenues respectivement dans $P_1$ et $P_2$, alors $d$ est parallèle à $d_1$ et $d_2$.
+
+	\section{Produits scalaires}
+
+	Rappels, un produit scalaire entre $\vec{u}$ et $\vec{v}$ se note :
+	\[ \vec{u} \cdot \vec{v} \]
+
+	Un produit scalaire dans une base orthonormée de l'espace se calcule 
+	\[ \vec{u} \cdot \vec{v} = xx'+yy'+zz' \]
+	
+	$\vec{u}$ et $\vec{v}$ sont orthogonaux si et seulement si $\vec{u} \cdot \vec{v} = 0$.
+
+	\section{Représentation paramétrique}
+
+	Soit un point $A$ tel que $A (x_a,y_a,z_a)$ et $\vec(u) \begin{pmatrix}x_u\\y_u\\z_u\end{pmatrix}$. \\
+	Soit $d$ la droite passant par $A$ de vecteur directeur $\vec{u}$. \\
+	Il existe une représentation paramétrique de cette droite de forme :
+	\[ 
+		\left\{ 
+			\begin{array}{cc}
+				x = & t*x_u + x_a \\
+				y = & t*y_u + y_a \\
+				z = & t*z_u + z_a
+			\end{array}
+		\right.
+		; t \in \mathbb{R}
+	\]
+	Cette représentation n'est pas unique : il en existe une infinité. \\
+	\\
+	Soit un point $M(x_m,y_m,z_m)$. \\
+	\[ M \in d \Leftrightarrow M \in d(A;\vec{u}) \Leftrightarrow \vec{AM}=t\vec{u};t\in\mathbb{R}\]
+	Cela revient à résoudre le système d'équation qu'est la représentation paramétrique de $d$ avec $x=x_m;y=y_m;z=z_m$.
+
+	\section{Équation cartésienne de plan}
+
+	Soit $A(\alpha,\beta,\gamma)$ et le vecteur normal $\vec{n} \begin{pmatrix}a\\b\\c\end{pmatrix}$ qui forment le plan $P$. \\
+	Soit $M(x,y,z)$.
+	\[
+		M\in P \Leftrightarrow ax+by+cz-(\alpha*a+\beta*b+\gamma*c) = 0 \Leftrightarrow \vec{AM} \cdot \vec{n} = 0
+	\]
+
+	Une équation cartésienne de plan est donc de forme $ax+by+cz-(\alpha*a+\beta*b+\gamma*c) = 0$ avec $(x,y,z)\in\mathbb{R}^3$ \\
+	Tous points vérifiant cette équation font partie du plan.
+\end{document}
+

@@ -1,0 +1,193 @@
+\documentclass{article}
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Fonctions}
+\author{William Hergès}
+\date{\today}
+
+\begin{document}
+	\maketitle
+
+	\section{Introduction}
+
+	Les fonctions peuvent être dérivées pour aider leurs études. La dérivation permet notamment d'étudier la convexité ainsi que la varation de la fonction. \\
+	En effet, la dérivé première, noté $f'$ pour la fonction $f$, permet d'obtenir la variation de la fonction, c'est-à-dire si elle est croissante ou décroissante. \\
+	\\
+	Une fonction est dérivable s'il s'agit d'un polynôme, ou d'une somme/produit/quotient de fonction dérivable sur $I$. De plus, les fonctions $\cos$ et $\sin$ sont dérivables sur $\mathbb{R}$
+
+	\section{Dérivée de fonction simple}
+	Pour dérivée une fonction, on utilise ce tableau suivant dans un grand nombre de cas :
+	
+	\begin{center}
+		\begin{tabular}{|c|c|}
+	                \hline
+		        Base & Dérivée \\
+		        \hline
+			$x^n$ pour $n \in \mathbb{N}$ & $nx^{n-1}$ \\
+		        \hline
+			$e^{x}$ & $e^{x}$ \\
+		        \hline
+			$\ln x$ & $x^{-1}$ \\
+			\hline
+			$\sin x$ & $\cos$ \\
+			\hline
+			$\cos$ & $\sin$ \\
+			\hline
+	        \end{tabular}
+	\end{center}
+
+	\section{Dérivées de produit ou de quotient de fonctions}
+
+	Les dérivées de produit ou de quotient ne suivent pas les règles plus haut car on ne dérive pas le contenu de la fonction mais la fonction. \\
+	\\
+	Nous allons d'abord voir les cas généraux :
+
+	\begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 Forme de Base & Dérivée \\
+			 \hline
+			 $u(x)*v(x)$ & $u'(x)*v(x)+u(x)*v'(x)$ \\
+			 \hline
+			 $\frac{u(x)}{v(x)}$ & $\frac{u'(x)*v(x)-u(x)*v'(x)}{(v(x))^2}$ \\
+			 \hline
+		 \end{tabular}
+	\end{center}
+
+	\section{Dérivées de composition de fonctions}
+
+	Comme pour les dérivées de produit et de quotient, les dérivées de composition de fonctions ne se dérive pas de la même manière que les autres. \\
+	Ici, à l'instar des autres méthodes, il existe quelques formules spécifiques qui permettent de dérivée le tout beaucoup plus rapidement. \\
+	\\
+	Commençons d'abord par voir le cas général :
+	\begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 Forme de Base & Dérivée \\
+			 \hline
+			 $u(x)\circ v(x)$ ou $u(v(x))$ & $v'(x)*v(u'(x))$ \\
+			 \hline
+		 \end{tabular}
+	\end{center}
+	Ensuite, pour aller plus rapidement, nous pouvons retenir des formes spécifiques. \\
+	\begin{center}
+		 \begin{tabular}{|c|c|}
+			 \hline
+			 Forme de Base & Dérivée \\
+			 \hline
+			 $e^{u(x)}$ & $u'(x)*e^{u(x)}$ \\
+			 \hline
+			 $\ln (u(x))$ & $\frac{u'(x)}{u(x)}$ \\
+			 \hline
+			 $\sqrt{u(x)}$ & $\frac{u'(x)}{2\sqrt{u(x)}}$ \\
+			 \hline
+			 $(u(x))^n$ avec $n \in \mathbb{N}$ & $nu'(x)(u(x))^{n-1}$ \\
+			 \hline
+		 \end{tabular}
+	\end{center}
+
+	L'ensemble de définition de ces fonctions composées sont l'ensemble des réels x appartenant à $D_v$ dont l'image par $v$ appartient à $D_u$.
+
+	\section{Propriété de la dérivation}
+
+	La fonction dérivée et sa primitive sont liées. \\
+	En effet, la varition de la primitive dépend du signe de sa dérivée. Si sa dérivée est négative sur $I$, alors elle est décroissante sur $I$, et si sa dérivée est positive sur $I'$, alors elle est croissante sur $I'$. \\
+	\\
+	De plus, il existe aussi un lien entre la primitive et sa dérivée seconde. \\
+	La convexité dépend de la primitive dépend de sa dérivée seconde. Si sa dérivée seconde est négative sur $I$, alors elle est concave et sa dérivée est décroissante sur $I$, et si sa dérivée seconde est positive sur $I'$, alors elle est convexe et sa dérivée est croissante sur $I'$.
+
+	\section{Primitive}
+
+	La primitive est la méthode inverse de la dérivation. \\
+	Elle permet de passer de $f'$ à $f$. \\
+	\\
+	Pour prendre la primitive d'une fonction, il faut utiliser les formules que nous avons vu lors plus haut.
+
+	\begin{center}
+		\begin{tabular}{|c|c|}
+	                \hline
+		        Dérivée & Primitive \\
+			\hline
+			$x^n$ & $\frac{x^{n+1}}{x^{n+1}}$ \\
+			\hline
+			$\frac{1}{x}$ & $\ln x$ \\
+			\hline
+			$\frac{1}{\sqrt{x}}$ & $2\sqrt{x}$ \\
+			\hline
+			$e^x$ & $e^x$ \\
+			\hline
+			$\cos x$ & $\sin x$ \\
+			\hline
+			$\sin x$ & $-\cos x$ \\
+			\hline
+		\end{tabular}
+	\end{center}
+
+	\section{Équation de la tangeante}
+
+	Équation de la tangeante en un point d'abscisse A avec $f(x)$ la fonction :
+	\[ y=f'(a)(x-a)+f(a) \]
+	Mémotechnique : convexe = forme un V, concave forme une cave.
+	
+	\section{Continuité}
+
+	Soit $a\in I$. \\
+	$f$ est continue en a quand $\lim_{x \to a} = \lim_{x\to -a} = f(a)$. \\
+	Les sommes, produits, quotients et compositions de fonctions continues donnent une fonction continue sur son ensemble de définition. \\
+	Si $f$ est dérivable sur $I$, alors elle est continue sur $I$.
+
+	\section{Théorème des valeurs intermédiaires}
+
+	Si $f$ est continue et strictement croissante, que $f(a) = \alpha$, que $f(b) = \beta$ et que $\alpha < \beta$, avec $a,b,\alpha,\beta \in \mathbb{R}$ et $a<b$ ; ou si $f$ est continue et strictement décroissante, que $f(a) = \alpha$, que $f(b) = \beta$ et que $\alpha < \beta$, avec $a,b,\alpha,\beta \in \mathbb{R}$ et $b<a$, alors
+	\[ \exists l \in \mathbb{R} / \alpha < l < \beta \]
+
+	\section{Théorème}
+
+	Soit $f$, une fonction continue sur $\mathbb{R}$ et $u_n$ une suite à valeur sur $\mathbb{R}$ défini par $u_{n+1} = f(u_n)$. \\
+	Si $u_n$ converge vers $l$ si et seulement si $f(x)$ converge vers $l$. 
+	\[ \lim f(x) = \lim u_{n+1} = \lim u_n = l \]
+	Ainsi :
+	\[ f(l) = l \]
+	Car $f(x) = f(l)$ car $x$ est quelconque.
+
+
+	\section{Logarithme népérien}
+
+	La fonction $\ln x$ est la fonction réciproque de $e^x$. \\
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline
+			Forme & Simplification \\
+			\hline
+			$\ln (a*b)$ & $\ln a + \ln b$ \\
+			\hline
+			$\ln (\frac{a}{b})$ & $\ln a - \ln b$ \\
+			\hline
+			$\ln (a^n)$ pour $n\in\mathbb{Z}$ & $n\ln a$ \\
+			\hline
+		\end{tabular}
+	\end{center}
+	$\ln$ est défini sur $\mathbb{R}^{+*}$. Sa dérivé est $x^{-1}$. \\
+	\\
+	Quelques propriétés et notations découlant de $\ln$ :
+	\[
+		\log x = \frac{\ln x}{\ln 10}
+	\]
+	\[
+		\log_a x = \frac{\ln x}{\ln a}
+	\]
+	La fonction $\log$ permet est la réciproque de $10^x$ et la fonction $\log_a$ est la réciproque de $a^x$.
+
+	\section{Limites des logarithmes}
+
+	La fonction $\ln$ et ses dérivées possèdent de nombreuses particularités au niveau des limites. \\
+	Quand on applique ces propriétés, on indique "par croissance comparé". \\
+	\[
+		\lim_{x \to 0} x^n*\ln x = 0;n\in\mathbb{Z}
+	\]
+	\[
+		\lim_{x \to +\infty} \frac{\ln x}{x^n} = 0;n\in\mathbb{Z}
+	\]
+\end{document}
+

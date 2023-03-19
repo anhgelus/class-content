@@ -1,0 +1,49 @@
+\documentclass{article}
+
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Probabilités}
+\author{William Hergès}
+\date{\today}
+
+\begin{document}
+	\maketitle
+
+	\section{Ensemble}
+
+	L'ensemble vide est inclu dans $\mathbb{R}$. \\
+	\\
+	Le nombre total de sous-élément de $E$, un ensemble à $n$ éléments, est égale à :
+	\[ 2^n\]
+	Soit $n$ et $k$ tel que $0 <= k <= n$. \\
+	Le nombre de combinaison de $k$ éléments d'un ensemble à $n$ éléments est noté $ 
+		\begin{pmatrix}
+                	n \\
+                        k
+		\end{pmatrix}
+	$, et est donné par $
+		\begin{pmatrix}
+                	n \\
+                        k
+		\end{pmatrix} = \frac{n!}{(n-k)!k!}
+	$.
+
+	\section{Épreuves indépendantes}
+
+	Soit une succession de n épreuves indépendantes. \\
+	L'univers des issues possibles est le produit cartésien $\Omega_1 * \Omega_2 * ... * \Omega_n$. \\
+	Soit une issue $(i_1,i_2,i_3,...,i_n)$, sa propabilité est le produit des probabilité de chacune des issues du n-uplet.
+
+	\section{Loi Binominale}
+
+	Une épreuve de Bernouilli est une épreuve à issue $S$ de probabilité $P$ et $\overline{S}$ de probabilité $1-P$. \\
+	Le schéma de Bernouilli est une succession d'épreuve de Bernouilli identique et indépendante. \\
+	\\
+	Soit $n\in\mathbb{N*}$ le nombre de succession d'épreuve lors d'un schéma de Bernouilli et $X$ le nombre de succès. \\
+	La probabilité que $X$ arrive $k$ fois est donnée par :
+	\[ P(X = k) = \begin{pmatrix}n \\ k\end{pmatrix}*P^k*(1-P)^{n-k} \]
+	Dans ce cas là, on dit que $X$ suit la loi binominale de paramètre $n$ et $P$. \\
+	L'espèrence de $X$, noté $E(X)$, est $E(x) = np$. La variance de $X$, noté $V(x)$, est $V(x) = np(1-p)$. L'écart-type de $X$, noté $\sigma(X)$, est $\sigma(X) = \sqrt{np(1-p)}$
+\end{document}
+

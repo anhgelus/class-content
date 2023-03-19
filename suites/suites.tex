@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage{bbm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\title{Suites}
+\author{William Hergès}
+\date{\today}
+
+\begin{document}
+	\maketitle
+
+	\section{Introduction}
+
+	Une démonstration par récurrence est efficace pour l'ensemble de démonstration se basant sur le principe d'hérédité, c'est-à-dire que si $u_k$ est vraie, alors $u_{k+1}$ est aussi vraie. \\
+	Ce type de démonstration est efficace quand on a affaire avec des suites définies par récurrence, c'est-à-dire définie comme cet exemple :
+	\[ \left\{ \begin{array}{l}
+			u_{n+1} = u_n+4 \\
+			u_0 = 2
+        	\end{array}
+		\right.  \]
+
+	\section{Préparer la démonstration}
+
+	Pour démontrer par récurrence, il faut avant tout définir la propriété mathématique que l'on souhaite démontrer. \\
+	Cette propriété sera de forme :
+	\[ P(n): a+b = 1 \]
+	au lycée, ou de forme :
+	\[ P_n: a+b = 1 \]
+	dans le supérieur. \\
+	Cette propriété est bien sûr une propriété booléenne, c'est-à-dire qu'elle est soit vraie, soit fausse.
+
+	\section{Étapes d'une démonstration par récurrence}
+
+	Une démonstration par récurrence se fait en 2 étapes si on omet l'introduction et la conclusion. \\
+	\\
+	La première étape est la phase d'initialisation. \\
+	Cette étape permet de dire qu'il existe au moins une valeur de la suite $u_n$ tel que $P_n$ soit vraie.\\
+	\\
+	Ensuite, nous devons démontrer que si $u_n$ est vrai, alors $u_{n+1}$ est aussi vrai. Il s'agit de la phase d'héréditée.
+
+	\section{Rédaction}
+
+	Dans cette section, nous allons voir comment rédiger une rédaction par récurrence. \\
+	Nous allons d'abord voir comment la rédiger pour le bac et ensuite comment la rédiger pour le post-bac. \\
+	\\
+	Montrons par récurrence :
+	\[ \forall n \in \mathbb{N} ; u_n = u_{n+1} - 5 \]
+	Pour $n$ dans $\mathbb{N}$, on note $P(n)$ la propriété :
+	\[ u_n = u_{n+1} \]
+	Initialisation. On a $u_0 = 5$ et $u_1 = 0$. Or $0 = 5-5$. \\
+	$P(0)$ est donc vraie. \\
+	\\
+	Hérédité. Fixons $n$ dans $\mathbb{N}$ tel que $P(n)$ soit vraie. On a donc : \\
+	\textit{
+		Ici il faut passer de $u_n$ à $u_{n+1}$ pour finir l'hérédité. \\
+		Ici nous n'allons pas le faire car il ne s'agit que d'un exemple de rédaction.
+	}
+	C'est exactement $P(n+1)$. Ainsi $P(n)$ est héréditaire. \\
+	\\
+	Comme $P(0)$ est vraie et que $P(n)$ est héréditaire, par principe de récurrence, $P(n)$ est vraie pour tout $n \in \mathbb{N}$.
+\end{document}
+
