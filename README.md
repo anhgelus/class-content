@@ -1,4 +1,4 @@
-# Class
+# Class Content
 
 Dans cette repository qui sera exclusivement en français, car il s'agit de ma langue maternelle ainsi que la langue dans laquelle les mathématiques me sont enseignés, il y aura l'intégralité de mes cours depuis september 2022 en LaTeX (`.tex`) et convertis en PDF (`.pdf`).
 
